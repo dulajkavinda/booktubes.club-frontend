@@ -1,6 +1,8 @@
-$primary-color: black;
+@import "./styles/config";
 
 .App {
-  display: flex;
-  background-color: $primary-color;
+  height: 100%;
+
+  background-color: red;
+  @include flexCenter();
 }

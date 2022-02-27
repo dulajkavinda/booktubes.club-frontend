@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render self and subcomponents 1`] = `
+<Dashboard>
+  <div>
+    <p
+      id="dash"
+    >
+      Dashboard
+    </p>
+  </div>
+</Dashboard>
+`;
