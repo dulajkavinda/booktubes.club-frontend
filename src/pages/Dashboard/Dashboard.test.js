@@ -9,6 +9,6 @@ beforeEach(() => {
 
 describe("dashboard basic tests", () => {
   it("is dashboard renders", () => {
-    expect(wrapper.find("p")).toEqual({});
+    expect(wrapper.find("#dash-title").text()).toEqual("Dashboard");
   });
 });
