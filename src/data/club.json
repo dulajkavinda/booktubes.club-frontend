@@ -1,0 +1,31 @@
+{
+  "clubs": [
+    {
+      "id": "001",
+      "club_name": "Millers Club",
+      "category": ["Horror", "Thriller"],
+      "description": "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.",
+      "member_count": 37,
+      "img_url": "https://img.jped",
+      "members": ["USR001", "USR002", "USR003"]
+    },
+    {
+      "id": "002",
+      "club_name": "Pearls Club",
+      "category": ["Sci-Fi"],
+      "img_url": "https://img.jped",
+      "description": "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.",
+      "member_count": 40,
+      "members": ["USR001", "USR002", "USR003"]
+    },
+    {
+      "id": "003",
+      "club_name": "John's Club",
+      "category": ["Romance"],
+      "img_url": "https://img.jped",
+      "description": "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.",
+      "member_count": 12,
+      "members": ["USR001", "USR002", "USR003"]
+    }
+  ]
+}
