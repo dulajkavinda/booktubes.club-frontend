@@ -1,0 +1,27 @@
+@import "../../styles/config";
+
+.dashboard_main {
+  margin: 10px;
+  .dashboard_title {
+    display: flex;
+    align-items: center;
+    height: 100px;
+
+    font-family: $primary-text-style;
+    font-weight: 800;
+    font-size: $primary-text-size;
+    color: $secondary-text-color;
+  }
+
+  .dashboard_reading {
+    @extend .dashboard_title;
+    font-size: $secondary-text-size;
+    color: $sub-text-color;
+    height: 50px;
+  }
+}
+
+.dashboard_list {
+  @include flexCenter(row);
+  justify-content: flex-start;
+}

@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "user_id": "USR001",
+      "user_name": "John",
+      "current_readings": {
+        "club_id": "001",
+        "book_id": "B001",
+        "percentage": 90
+      }
+    }
+  ]
+}
