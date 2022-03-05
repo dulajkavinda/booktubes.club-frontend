@@ -1,5 +1,4 @@
 import * as React from "react";
-import { styled } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
@@ -12,9 +11,20 @@ import ShareIcon from "@mui/icons-material/Share";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 
+import { addMember } from '../../APIs/api.actions'
+
 import "./Club.scss";
 
-export default function Club({ club, type }) {
+export default function Club({ club, type, joins }) {
+
+  const handleJoin = () => {
+    addMember(club._id, localStorage.getItem('user')).then(res => {
+      joins();
+    }).catch(err => {
+      console.log(err);
+    })
+  }
+
   return (
     <Card className="club_main" sx={{ width: 345 }}>
       <CardHeader
@@ -53,7 +63,7 @@ export default function Club({ club, type }) {
         {type === "joined" ? (
           <Button variant="contained">View Club</Button>
         ) : (
-          <Button color="success" variant="contained">
+          <Button color="success" variant="contained" onClick={handleJoin}>
             Join Club
           </Button>
         )}
