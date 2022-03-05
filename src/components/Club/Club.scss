@@ -1,0 +1,20 @@
+@import "../../styles/config";
+
+.club_main {
+  margin-right: 10px;
+}
+
+.card_media_main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .progress {
+    font-family: $primary-text-style;
+    font-weight: 600;
+  }
+
+  .book_summary {
+    margin-left: 10px;
+  }
+}

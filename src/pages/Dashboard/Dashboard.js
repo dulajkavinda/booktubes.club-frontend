@@ -1,17 +1,43 @@
-import React from "react";
-import BookClubList from "./../../containers/BookClubList";
-import Button from '@mui/material/Button';
-import './Dashboard.scss';
+import React, { useState } from "react";
+import Card from "../../components/Club/Club";
+import AddClub from "../../components/Modals/AddClub";
+
+import "./Dashboard.scss";
+
+import data from "../../data/club.json";
+import user_data from "../../data/user.json";
+
+import Button from "@mui/material/Button";
+
+const user_id = "USR001";
 
 export default function Dashboard() {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+
   return (
-    <div>
-      <div className='join-club-sec-heading'>
-        <h2>Joined Book Clubs</h2>
-        <Button className='create-club-btn' variant="contained">Create a new Book Club</Button>
+    <div className="dashboard_main">
+      <div className="dashboard_title">Dashboard</div>
+      <Button onClick={handleOpen} variant="contained">
+        Create a Book Club
+      </Button>
+      <AddClub open={open} setOpen={setOpen} />
+      <div className="dashboard_reading">Joined Clubs</div>
+      <div className="dashboard_list">
+        {data.clubs
+          .filter((club) => {
+            return club.members.includes(user_id);
+          })
+          .map((club) => {
+            return <Card type={"joined"} club={club} />;
+          })}
       </div>
-      <hr />
-      <BookClubList></BookClubList>
+      <div className="dashboard_reading">Explore New Clubs</div>
+      <div className="dashboard_list">
+        {data.clubs.map((club) => {
+          return <Card type={"explore"} club={club} />;
+        })}
+      </div>
     </div>
   );
 }
