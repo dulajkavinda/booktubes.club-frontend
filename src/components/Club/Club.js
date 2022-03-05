@@ -16,7 +16,7 @@ import "./Club.scss";
 
 export default function Club({ club, type }) {
   return (
-    <Card className="club_main" sx={{ width: 250 }}>
+    <Card className="club_main" sx={{ width: 345 }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -31,14 +31,14 @@ export default function Club({ club, type }) {
         <Typography variant="body2" color="text.secondary">
           {type === "joined" ? (
             <div className="card_media_main">
-              <div>
-                <img
-                  height={100}
-                  src="https://bookaudio.online/uploads/images/media/125/usplBPlBuHH5yS9m-charles-dickens-oliver-twist.jpg"
-                />
-              </div>
+              <CardMedia
+                component="img"
+                height="220px"
+                image="https://bookaudio.online/uploads/images/media/125/usplBPlBuHH5yS9m-charles-dickens-oliver-twist.jpg"
+                alt="Oliver Twist"
+              />
               <div className="book_summary">
-                <div>This impressive paella is a perfect party dish and</div>
+                <div>The novel follows the journey of the titular character, Oliver Twist. Oliver, an orphan since birth, spends much of his childhood at a “child farm” (orphanage) with too many children and too little food. The farm is located roughly 70 miles outside London.</div>
                 <div className="progress">
                   <span>Progress : 90%</span>
                 </div>

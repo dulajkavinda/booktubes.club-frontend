@@ -1,7 +1,7 @@
 @import "../../styles/config";
 
 .dashboard_main {
-  margin: 10px;
+  margin: 20px;
   .dashboard_title {
     display: flex;
     align-items: center;
@@ -15,7 +15,7 @@
 
   .dashboard_reading {
     @extend .dashboard_title;
-    font-size: $secondary-text-size;
+    font-size: $primary-text-size;
     color: $sub-text-color;
     height: 50px;
   }
@@ -24,4 +24,12 @@
 .dashboard_list {
   @include flexCenter(row);
   justify-content: flex-start;
+  padding-bottom: 30px;
+}
+
+.joined_club_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
 }
