@@ -17,12 +17,13 @@ export default function Dashboard() {
 
   return (
     <div className="dashboard_main">
-      <div className="dashboard_title">Dashboard</div>
-      <Button onClick={handleOpen} variant="contained">
-        Create a Book Club
-      </Button>
+      <div className="joined_club_header">
+        <div className="dashboard_reading">Joined Clubs</div>
+        <Button onClick={handleOpen} variant="contained">
+          Create a Book Club
+        </Button>
+      </div>
       <AddClub open={open} setOpen={setOpen} />
-      <div className="dashboard_reading">Joined Clubs</div>
       <div className="dashboard_list">
         {data.clubs
           .filter((club) => {
