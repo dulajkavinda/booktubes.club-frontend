@@ -33,7 +33,7 @@ export default function Dashboard() {
             return <Card type={"joined"} club={club} />;
           })}
       </div>
-      <div className="dashboard_reading">Explore New Clubs</div>
+      <div className="dashboard_explore">Explore New Clubs</div>
       <div className="dashboard_list">
         {data.clubs.map((club) => {
           return <Card type={"explore"} club={club} />;

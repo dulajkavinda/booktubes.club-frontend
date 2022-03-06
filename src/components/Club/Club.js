@@ -15,6 +15,9 @@ import Button from "@mui/material/Button";
 import "./Club.scss";
 
 export default function Club({ club, type }) {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+
   return (
     <Card className="club_main" sx={{ width: 345 }}>
       <CardHeader
@@ -38,7 +41,13 @@ export default function Club({ club, type }) {
                 alt="Oliver Twist"
               />
               <div className="book_summary">
-                <div>The novel follows the journey of the titular character, Oliver Twist. Oliver, an orphan since birth, spends much of his childhood at a “child farm” (orphanage) with too many children and too little food. The farm is located roughly 70 miles outside London.</div>
+                <div>
+                  The novel follows the journey of the titular character, Oliver
+                  Twist. Oliver, an orphan since birth, spends much of his
+                  childhood at a “child farm” (orphanage) with too many children
+                  and too little food. The farm is located roughly 70 miles
+                  outside London.
+                </div>
                 <div className="progress">
                   <span>Progress : 90%</span>
                 </div>
