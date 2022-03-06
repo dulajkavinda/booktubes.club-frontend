@@ -1,3 +1,3 @@
 export const server = {
-    BACKEND_URL: "http://localhost:5002",
+    BACKEND_URL: "https://booktubes.herokuapp.com",
 }

@@ -15,6 +15,28 @@ export const createUser = async (user) => {
 	}
 };
 
+export const getCurretReadingsData = async (userId, clubId) => {
+	const userData = await axios.get(`${server.BACKEND_URL}/users/getUserById/${userId}`);
+
+	const booksData = await axios.get(`${server.BACKEND_URL}/books/getBooks`);
+
+	let Readings = []
+	
+	booksData.data.data.forEach((book) => {
+		userData.data.data[0].current_readings.forEach((reading) => {
+			if ((book._id === reading.book_id) && (reading.club_id === clubId)) {
+				let obj ={
+					book: book,
+					progress: reading.percentage
+				}
+				Readings.push(obj);
+			}
+		});
+	})
+
+	return Readings;
+}
+
 //Clubs
 export const createClub = async (club) => {
 	const response = await axios.post(
