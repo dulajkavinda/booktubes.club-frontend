@@ -19,6 +19,13 @@
     color: $sub-text-color;
     height: 50px;
   }
+
+  .dashboard_explore {
+    @extend .dashboard_title;
+    font-size: $primary-text-size;
+    color: $sub-text-color;
+    height: 50px;
+  }
 }
 
 .dashboard_list {

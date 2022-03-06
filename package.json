@@ -16,6 +16,7 @@
     "firebase": "^9.6.7",
     "node-sass": "^7.0.1",
     "react": "^17.0.2",
+    "react-countup": "^6.1.1",
     "react-dom": "^17.0.2",
     "react-firebase-hooks": "^5.0.3",
     "react-google-button": "^0.7.2",

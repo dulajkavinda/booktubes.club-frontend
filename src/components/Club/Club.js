@@ -11,8 +11,8 @@ import ShareIcon from '@mui/icons-material/Share';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth } from '../../firebase';
+// import { useAuthState } from 'react-firebase-hooks/auth';
+// import { auth } from '../../firebase';
 
 import { addMember, getCurretReadingsData } from '../../APIs/api.actions';
 
