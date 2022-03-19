@@ -12,6 +12,7 @@ import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
 import Homepage from "./pages/Homepage/Homepage";
 import AppBarElement from "./components/AppBarElement";
+import Club from "./pages/Club/Club";
 import React from "react";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/club" element={<Club />} />
         </Routes>
       </BrowserRouter>
     </div>
