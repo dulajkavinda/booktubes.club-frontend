@@ -15,11 +15,13 @@ import Button from '@mui/material/Button';
 // import { auth } from '../../firebase';
 
 import { addMember, getCurretReadingsData } from '../../APIs/api.actions';
+import { useNavigate } from "react-router-dom";
 
 import './Club.scss';
 
 export default function Club({ club, type, joins }) {
 	const [readings, setReadings] = useState([]);
+	const navigate = useNavigate();
 
 	const handleJoin = () => {
 		addMember(club._id, localStorage.getItem('user'))
@@ -30,6 +32,10 @@ export default function Club({ club, type, joins }) {
 				console.log(err);
 			});
 	};
+
+	const viewClub = () => {
+		navigate(`/club/${club._id}`);
+	}
 
 	useEffect(() => {
 		getCurretReadingsData(localStorage.getItem('user'), club._id)
@@ -86,7 +92,7 @@ export default function Club({ club, type, joins }) {
 			</CardContent>
 			<CardActions>
 				{type === 'joined' ? (
-					<Button variant='contained'>View Club</Button>
+					<Button variant='contained' onClick={viewClub}>View Club</Button>
 				) : (
 					<Button color='success' variant='contained' onClick={handleJoin}>
 						Join Club

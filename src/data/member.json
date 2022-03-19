@@ -1,0 +1,20 @@
+{
+	"members": [
+		{
+			"userid": "001",
+			"userName": "John Doe",
+			"percentage": 24.00
+		},
+		{
+			"userid": "002",
+			"userName": "Emma MaCay",
+			"percentage": 24.00
+		},
+		{
+			"userid": "003",
+			"userName": "Beth Johns",
+			"percentage": 24.00
+		}
+
+	]
+}
