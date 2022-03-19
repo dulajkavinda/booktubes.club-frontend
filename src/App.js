@@ -12,6 +12,8 @@ import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
 import Homepage from "./pages/Homepage/Homepage";
 import AppBarElement from "./components/AppBarElement";
+
+import BookClubPageTemp from "./pages/BookClubPageTemp/BookClubPageTemp";
 import React from "react";
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/bookclubpagetemp" element={<BookClubPageTemp />} />
+
         </Routes>
       </BrowserRouter>
     </div>
