@@ -1,14 +1,14 @@
 import React from "react";
 import { shallow, mount } from "enzyme";
-import Dashboard from "./Dashboard";
+import ClubProgress from "./ClubProgress";
 
 let wrapper;
 beforeEach(() => {
-  wrapper = shallow(<Dashboard />);
+  wrapper = shallow(<ClubProgress />);
 });
 
 describe("dashboard basic tests", () => {
-  it("is dashboard explore text awailable", () => {
+  it("is snapshot changed", () => {
     expect(wrapper).toMatchSnapshot();
   });
 });

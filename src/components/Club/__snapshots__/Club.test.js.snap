@@ -36,6 +36,7 @@ exports[`dashboard basic tests is snapshot changed 1`] = `
   <ForwardRef(CardActions)>
     <ForwardRef(Button)
       color="success"
+      onClick={[Function]}
       variant="contained"
     >
       Join Club

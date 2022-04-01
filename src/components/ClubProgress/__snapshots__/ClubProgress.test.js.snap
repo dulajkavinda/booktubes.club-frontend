@@ -1,0 +1,451 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dashboard basic tests is snapshot changed 1`] = `
+<div
+  className="member-progress-modal"
+>
+  <ForwardRef(Table)
+    aria-label="Member progress table"
+    sx={
+      Object {
+        "minWidth": 350,
+      }
+    }
+  >
+    <ForwardRef(TableBody)>
+      <ForwardRef(TableRow)
+        key="001"
+        sx={
+          Object {
+            "&:last-child td, &:last-child th": Object {
+              "border": 0,
+            },
+          }
+        }
+      >
+        <ForwardRef(TableCell)
+          component="th"
+          scope="row"
+        >
+          John Doe
+        </ForwardRef(TableCell)>
+        <ForwardRef(TableCell)>
+          <ForwardRef(LinearProgress)
+            className="progress-bar"
+            value={24}
+            variant="determinate"
+          />
+        </ForwardRef(TableCell)>
+      </ForwardRef(TableRow)>
+      <ForwardRef(TableRow)
+        key="0zYPmgHgOHWWt0X12iudnT0bNZ03"
+        sx={
+          Object {
+            "&:last-child td, &:last-child th": Object {
+              "border": 0,
+            },
+          }
+        }
+      >
+        <ForwardRef(TableCell)
+          component="th"
+          scope="row"
+        >
+          Emma MaCay
+        </ForwardRef(TableCell)>
+        <ForwardRef(TableCell)>
+          <ForwardRef(LinearProgress)
+            className="progress-bar"
+            value={52.1}
+            variant="determinate"
+          />
+        </ForwardRef(TableCell)>
+      </ForwardRef(TableRow)>
+      <ForwardRef(TableRow)
+        key="003"
+        sx={
+          Object {
+            "&:last-child td, &:last-child th": Object {
+              "border": 0,
+            },
+          }
+        }
+      >
+        <ForwardRef(TableCell)
+          component="th"
+          scope="row"
+        >
+          Beth Johns
+        </ForwardRef(TableCell)>
+        <ForwardRef(TableCell)>
+          <ForwardRef(LinearProgress)
+            className="progress-bar"
+            value={73}
+            variant="determinate"
+          />
+        </ForwardRef(TableCell)>
+      </ForwardRef(TableRow)>
+      <ForwardRef(TableRow)
+        key="004"
+        sx={
+          Object {
+            "&:last-child td, &:last-child th": Object {
+              "border": 0,
+            },
+          }
+        }
+      >
+        <ForwardRef(TableCell)
+          component="th"
+          scope="row"
+        >
+          John Doe
+        </ForwardRef(TableCell)>
+        <ForwardRef(TableCell)>
+          <ForwardRef(LinearProgress)
+            className="progress-bar"
+            value={24}
+            variant="determinate"
+          />
+        </ForwardRef(TableCell)>
+      </ForwardRef(TableRow)>
+      <ForwardRef(TableRow)
+        key="005"
+        sx={
+          Object {
+            "&:last-child td, &:last-child th": Object {
+              "border": 0,
+            },
+          }
+        }
+      >
+        <ForwardRef(TableCell)
+          component="th"
+          scope="row"
+        >
+          Emma MaCay
+        </ForwardRef(TableCell)>
+        <ForwardRef(TableCell)>
+          <ForwardRef(LinearProgress)
+            className="progress-bar"
+            value={52.1}
+            variant="determinate"
+          />
+        </ForwardRef(TableCell)>
+      </ForwardRef(TableRow)>
+      <ForwardRef(TableRow)
+        key="006"
+        sx={
+          Object {
+            "&:last-child td, &:last-child th": Object {
+              "border": 0,
+            },
+          }
+        }
+      >
+        <ForwardRef(TableCell)
+          component="th"
+          scope="row"
+        >
+          Beth Johns
+        </ForwardRef(TableCell)>
+        <ForwardRef(TableCell)>
+          <ForwardRef(LinearProgress)
+            className="progress-bar"
+            value={73}
+            variant="determinate"
+          />
+        </ForwardRef(TableCell)>
+      </ForwardRef(TableRow)>
+      <ForwardRef(TableRow)
+        key="007"
+        sx={
+          Object {
+            "&:last-child td, &:last-child th": Object {
+              "border": 0,
+            },
+          }
+        }
+      >
+        <ForwardRef(TableCell)
+          component="th"
+          scope="row"
+        >
+          John Doe
+        </ForwardRef(TableCell)>
+        <ForwardRef(TableCell)>
+          <ForwardRef(LinearProgress)
+            className="progress-bar"
+            value={24}
+            variant="determinate"
+          />
+        </ForwardRef(TableCell)>
+      </ForwardRef(TableRow)>
+      <ForwardRef(TableRow)
+        key="008"
+        sx={
+          Object {
+            "&:last-child td, &:last-child th": Object {
+              "border": 0,
+            },
+          }
+        }
+      >
+        <ForwardRef(TableCell)
+          component="th"
+          scope="row"
+        >
+          Emma MaCay
+        </ForwardRef(TableCell)>
+        <ForwardRef(TableCell)>
+          <ForwardRef(LinearProgress)
+            className="progress-bar"
+            value={52.1}
+            variant="determinate"
+          />
+        </ForwardRef(TableCell)>
+      </ForwardRef(TableRow)>
+      <ForwardRef(TableRow)
+        key="009"
+        sx={
+          Object {
+            "&:last-child td, &:last-child th": Object {
+              "border": 0,
+            },
+          }
+        }
+      >
+        <ForwardRef(TableCell)
+          component="th"
+          scope="row"
+        >
+          Beth Johns
+        </ForwardRef(TableCell)>
+        <ForwardRef(TableCell)>
+          <ForwardRef(LinearProgress)
+            className="progress-bar"
+            value={73}
+            variant="determinate"
+          />
+        </ForwardRef(TableCell)>
+      </ForwardRef(TableRow)>
+      <ForwardRef(TableRow)
+        key="0012"
+        sx={
+          Object {
+            "&:last-child td, &:last-child th": Object {
+              "border": 0,
+            },
+          }
+        }
+      >
+        <ForwardRef(TableCell)
+          component="th"
+          scope="row"
+        >
+          John Doe
+        </ForwardRef(TableCell)>
+        <ForwardRef(TableCell)>
+          <ForwardRef(LinearProgress)
+            className="progress-bar"
+            value={24}
+            variant="determinate"
+          />
+        </ForwardRef(TableCell)>
+      </ForwardRef(TableRow)>
+      <ForwardRef(TableRow)
+        key="0013"
+        sx={
+          Object {
+            "&:last-child td, &:last-child th": Object {
+              "border": 0,
+            },
+          }
+        }
+      >
+        <ForwardRef(TableCell)
+          component="th"
+          scope="row"
+        >
+          Emma MaCay
+        </ForwardRef(TableCell)>
+        <ForwardRef(TableCell)>
+          <ForwardRef(LinearProgress)
+            className="progress-bar"
+            value={52.1}
+            variant="determinate"
+          />
+        </ForwardRef(TableCell)>
+      </ForwardRef(TableRow)>
+      <ForwardRef(TableRow)
+        key="0033"
+        sx={
+          Object {
+            "&:last-child td, &:last-child th": Object {
+              "border": 0,
+            },
+          }
+        }
+      >
+        <ForwardRef(TableCell)
+          component="th"
+          scope="row"
+        >
+          Beth Johns
+        </ForwardRef(TableCell)>
+        <ForwardRef(TableCell)>
+          <ForwardRef(LinearProgress)
+            className="progress-bar"
+            value={73}
+            variant="determinate"
+          />
+        </ForwardRef(TableCell)>
+      </ForwardRef(TableRow)>
+      <ForwardRef(TableRow)
+        key="0015"
+        sx={
+          Object {
+            "&:last-child td, &:last-child th": Object {
+              "border": 0,
+            },
+          }
+        }
+      >
+        <ForwardRef(TableCell)
+          component="th"
+          scope="row"
+        >
+          John Doe
+        </ForwardRef(TableCell)>
+        <ForwardRef(TableCell)>
+          <ForwardRef(LinearProgress)
+            className="progress-bar"
+            value={24}
+            variant="determinate"
+          />
+        </ForwardRef(TableCell)>
+      </ForwardRef(TableRow)>
+      <ForwardRef(TableRow)
+        key="0028"
+        sx={
+          Object {
+            "&:last-child td, &:last-child th": Object {
+              "border": 0,
+            },
+          }
+        }
+      >
+        <ForwardRef(TableCell)
+          component="th"
+          scope="row"
+        >
+          Emma MaCay
+        </ForwardRef(TableCell)>
+        <ForwardRef(TableCell)>
+          <ForwardRef(LinearProgress)
+            className="progress-bar"
+            value={52.1}
+            variant="determinate"
+          />
+        </ForwardRef(TableCell)>
+      </ForwardRef(TableRow)>
+      <ForwardRef(TableRow)
+        key="0037"
+        sx={
+          Object {
+            "&:last-child td, &:last-child th": Object {
+              "border": 0,
+            },
+          }
+        }
+      >
+        <ForwardRef(TableCell)
+          component="th"
+          scope="row"
+        >
+          Beth Johns
+        </ForwardRef(TableCell)>
+        <ForwardRef(TableCell)>
+          <ForwardRef(LinearProgress)
+            className="progress-bar"
+            value={73}
+            variant="determinate"
+          />
+        </ForwardRef(TableCell)>
+      </ForwardRef(TableRow)>
+      <ForwardRef(TableRow)
+        key="0019"
+        sx={
+          Object {
+            "&:last-child td, &:last-child th": Object {
+              "border": 0,
+            },
+          }
+        }
+      >
+        <ForwardRef(TableCell)
+          component="th"
+          scope="row"
+        >
+          John Doe
+        </ForwardRef(TableCell)>
+        <ForwardRef(TableCell)>
+          <ForwardRef(LinearProgress)
+            className="progress-bar"
+            value={24}
+            variant="determinate"
+          />
+        </ForwardRef(TableCell)>
+      </ForwardRef(TableRow)>
+      <ForwardRef(TableRow)
+        key="0020"
+        sx={
+          Object {
+            "&:last-child td, &:last-child th": Object {
+              "border": 0,
+            },
+          }
+        }
+      >
+        <ForwardRef(TableCell)
+          component="th"
+          scope="row"
+        >
+          Emma MaCay
+        </ForwardRef(TableCell)>
+        <ForwardRef(TableCell)>
+          <ForwardRef(LinearProgress)
+            className="progress-bar"
+            value={52.1}
+            variant="determinate"
+          />
+        </ForwardRef(TableCell)>
+      </ForwardRef(TableRow)>
+      <ForwardRef(TableRow)
+        key="0030"
+        sx={
+          Object {
+            "&:last-child td, &:last-child th": Object {
+              "border": 0,
+            },
+          }
+        }
+      >
+        <ForwardRef(TableCell)
+          component="th"
+          scope="row"
+        >
+          Beth Johns
+        </ForwardRef(TableCell)>
+        <ForwardRef(TableCell)>
+          <ForwardRef(LinearProgress)
+            className="progress-bar"
+            value={73}
+            variant="determinate"
+          />
+        </ForwardRef(TableCell)>
+      </ForwardRef(TableRow)>
+    </ForwardRef(TableBody)>
+  </ForwardRef(Table)>
+</div>
+`;

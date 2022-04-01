@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddPoll basic tests is snapshot changed 1`] = `
+<ForwardRef(Modal)
+  aria-describedby="modal-modal-description"
+  aria-labelledby="modal-modal-title"
+  onClose={[Function]}
+  open={true}
+>
+  <ForwardRef(Box)
+    sx={
+      Object {
+        "bgcolor": "background.paper",
+        "border": "2px solid #000",
+        "boxShadow": 24,
+        "left": "50%",
+        "p": 4,
+        "position": "absolute",
+        "top": "50%",
+        "transform": "translate(-50%, -50%)",
+        "width": 400,
+      }
+    }
+  >
+    <ForwardRef(TextField)
+      fullWidth={true}
+      id="pollname"
+      label="Poll Name"
+      onChange={[Function]}
+      value={Array []}
+    />
+    <ForwardRef(Box)
+      height={10}
+    />
+    <ForwardRef(TextField)
+      fullWidth={true}
+      id="book1"
+      label="Book 1"
+      onChange={[Function]}
+      value={Array []}
+    />
+    <ForwardRef(Box)
+      height={10}
+    />
+    <ForwardRef(TextField)
+      fullWidth={true}
+      id="book2"
+      label="Book 2"
+      onChange={[Function]}
+      value={Array []}
+    />
+    <ForwardRef(Box)
+      height={10}
+    />
+    <ForwardRef(TextField)
+      fullWidth={true}
+      id="book3"
+      label="Book 3"
+      onChange={[Function]}
+      value={Array []}
+    />
+    <ForwardRef(Box)
+      height={10}
+    />
+    <ForwardRef(TextField)
+      fullWidth={true}
+      id="book4"
+      label="Book 4"
+      onChange={[Function]}
+      value={Array []}
+    />
+    <ForwardRef(Box)
+      height={10}
+    />
+    <ForwardRef(TextField)
+      fullWidth={true}
+      id="book5"
+      label="Book 5"
+      onChange={[Function]}
+      value={Array []}
+    />
+    <ForwardRef(Box)
+      height={10}
+    />
+    <LocalizationProvider
+      dateAdapter={[Function]}
+      fullWidth={true}
+    >
+      <ForwardRef(DateTimePicker)
+        fullWidth={true}
+        label="Poll Deadline"
+        minDateTime={2022-03-20T13:24:54.918Z}
+        onChange={[Function]}
+        renderInput={[Function]}
+        value={Array []}
+      />
+      <ForwardRef(Box)
+        height={10}
+      />
+      <ForwardRef(Button)
+        onClick={[Function]}
+        variant="contained"
+      >
+        Create Poll
+      </ForwardRef(Button)>
+    </LocalizationProvider>
+  </ForwardRef(Box)>
+</ForwardRef(Modal)>
+`;
