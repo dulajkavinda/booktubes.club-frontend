@@ -19,7 +19,7 @@ export default function Dashboard() {
         <div className={styles.create}>
           <span className={styles.title}>My Clubs</span>
 
-          <Button ml={5} variant={"outline"} mr={4} colorScheme="blue">
+          <Button ml={5} variant={"outline"} mr={5} colorScheme="blue">
             <Link href={"/create/AddClub"}>
               <a> Create Your Own Club</a>
             </Link>
