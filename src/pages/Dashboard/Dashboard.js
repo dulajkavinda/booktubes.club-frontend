@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../containers/NavBar/Navbar";
 import { Button } from "@chakra-ui/react";
-import Club from "../../components/club/Club";
+import Club from "../../components/Club/Club";
 import { Divider } from "@chakra-ui/react";
 import styles from "./Dashboard.module.css";
 import Link from "next/link";
