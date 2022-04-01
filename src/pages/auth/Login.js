@@ -41,7 +41,7 @@ export default function LogIn() {
     }
     if (user) {
       setUser(user);
-      router.push("/dashboard/Dashboard");
+      router.push("/Dashboard/Dashboard");
     }
   }, [user, loading]);
 

@@ -17,7 +17,7 @@ export default function Home() {
 
   useEffect(() => {
     if (userid) {
-      router.push("/dashboard");
+      router.push("/Dashboard/Dashboard");
     }
   }, []);
 

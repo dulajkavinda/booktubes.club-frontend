@@ -32,7 +32,7 @@ export default function AddClub() {
       currency: category,
     }).then((response) => {
       if (response.code === 200) {
-        router.push("/dashboard/Dashboard");
+        router.push("/Dashboard/Dashboard");
       }
     });
   };
