@@ -5,7 +5,7 @@ import styles from "../../styles/Home.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import Club from "../../components/club/Club";
+import Club from "../../components/Club/Club";
 
 import clubdata from "../../data/clubs.json";
 
