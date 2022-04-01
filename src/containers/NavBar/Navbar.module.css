@@ -1,0 +1,41 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+}
+
+.inside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 70px;
+
+  background-color: gainsboro;
+}
+
+.inside .links {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.inside .links > div {
+  margin-inline-end: 20px;
+
+  font-family: var(--text-style-primary);
+}
+
+.logo {
+  margin-left: 20px;
+
+  font-size: 25px;
+  font-weight: bolder;
+
+  font-family: var(--text-style);
+}

@@ -1,0 +1,214 @@
+{
+    "message": "Records Found",
+    "data": [
+        {
+            "_id": "622328f00faa6fa53622f14d",
+            "club_name": "Millers Club",
+            "category": [
+                "Horror",
+                "Thriller"
+            ],
+            "clubType": true,
+            "description": "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.",
+            "img_url": "https://img.jped",
+            "member_count": 2,
+            "members": [
+                "OMqhMq09gDYNvO8VQ4ZhP9A4EUm1",
+                "0zYPmgHgOHWWt0X12iudnT0bNZ03",
+                "0zYPmgHgOHWWt0X12iudnT0bNZ03",
+                "0zYPmgHgOHWWt0X12iudnT0bNZ03",
+                "0zYPmgHgOHWWt0X12iudnT0bNZ03",
+                "0zYPmgHgOHWWt0X12iudnT0bNZ03"
+            ],
+            "__v": 0,
+            "posts": [
+                {
+                    "_id": "6235aec2b2f87d3670da6263",
+                    "description": "Test post with voting params 03",
+                    "user": "FSpkSzlfbEafc2I7M7aia4QDEQy2",
+                    "upvotes": 0,
+                    "downvotes": 0,
+                    "upvoters": [],
+                    "downvoters": [],
+                    "createdAt": "2022-03-19T10:21:54.213Z"
+                }
+            ],
+            "updatedAt": "2022-03-20T12:46:20.987Z"
+        },
+        {
+            "_id": "622380717deffaced783d64a",
+            "club_name": "John's Club",
+            "category": [
+                "Horror",
+                "Thriller"
+            ],
+            "clubType": true,
+            "description": "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.",
+            "img_url": "https://img.jped",
+            "member_count": 0,
+            "members": [],
+            "posts": [],
+            "createdAt": "2022-03-05T15:23:29.725Z",
+            "updatedAt": "2022-03-05T15:23:29.725Z",
+            "__v": 0
+        },
+        {
+            "_id": "622381c2b88956aa660b0af4",
+            "club_name": "Dulaj's Club",
+            "category": [
+                "Thriller"
+            ],
+            "clubType": false,
+            "description": "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.",
+            "img_url": "",
+            "member_count": 0,
+            "members": [
+                "OMqhMq09gDYNvO8VQ4ZhP9A4EUm1",
+                "4QlCqVDRvnddaw68O5gHLP3YpZG2",
+                "OMqhMq09gDYNvO8VQ4ZhP9A4EUm1",
+                "OMqhMq09gDYNvO8VQ4ZhP9A4EUm1",
+                "OMqhMq09gDYNvO8VQ4ZhP9A4EUm1",
+                "OMqhMq09gDYNvO8VQ4ZhP9A4EUm1",
+                "OMqhMq09gDYNvO8VQ4ZhP9A4EUm1",
+                "OMqhMq09gDYNvO8VQ4ZhP9A4EUm1",
+                "OMqhMq09gDYNvO8VQ4ZhP9A4EUm1",
+                "OMqhMq09gDYNvO8VQ4ZhP9A4EUm1",
+                "OMqhMq09gDYNvO8VQ4ZhP9A4EUm1",
+                "OMqhMq09gDYNvO8VQ4ZhP9A4EUm1",
+                "OMqhMq09gDYNvO8VQ4ZhP9A4EUm1",
+                "4QlCqVDRvnddaw68O5gHLP3YpZG2"
+            ],
+            "posts": [],
+            "createdAt": "2022-03-05T15:29:06.342Z",
+            "updatedAt": "2022-03-20T05:25:49.661Z",
+            "__v": 0
+        },
+        {
+            "_id": "6223825469f86bb5cde50bbb",
+            "club_name": "Sean's Club",
+            "category": [
+                "Sci-Fi"
+            ],
+            "clubType": false,
+            "description": "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.",
+            "img_url": "",
+            "member_count": 0,
+            "members": [
+                "OMqhMq09gDYNvO8VQ4ZhP9A4EUm1",
+                "OMqhMq09gDYNvO8VQ4ZhP9A4EUm1",
+                "OMqhMq09gDYNvO8VQ4ZhP9A4EUm1"
+            ],
+            "posts": [],
+            "createdAt": "2022-03-05T15:31:32.919Z",
+            "updatedAt": "2022-03-19T18:02:25.107Z",
+            "__v": 0
+        },
+        {
+            "_id": "62249b39aec46eb5fc245fb3",
+            "club_name": "Potter Heads",
+            "category": [
+                "Thriller"
+            ],
+            "clubType": false,
+            "description": "Harry Potter is a series of seven fantasy novels written by British author J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry",
+            "img_url": "https://bookaudio.online/uploads/images/media/125/usplBPlBuHH5yS9m-charles-dickens-oliver-twist.jpg",
+            "member_count": 0,
+            "members": [
+                "OMqhMq09gDYNvO8VQ4ZhP9A4EUm1",
+                "0zYPmgHgOHWWt0X12iudnT0bNZ03",
+                "0zYPmgHgOHWWt0X12iudnT0bNZ03"
+            ],
+            "posts": [],
+            "createdAt": "2022-03-06T11:30:01.898Z",
+            "updatedAt": "2022-03-20T06:14:07.761Z",
+            "__v": 0
+        },
+        {
+            "_id": "6235b9e122a21ae2948bf9ac",
+            "club_name": "Brad's Club",
+            "category": [
+                "Horror",
+                "Thriller"
+            ],
+            "clubType": true,
+            "description": "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.",
+            "img_url": "https://img.jped",
+            "member_count": 0,
+            "members": [
+                "SOlITYASCYMEB07smagGtHaMV12"
+            ],
+            "posts": [
+                {
+                    "postId": "44951893-bcad-4f42-821b-cef1568ab054",
+                    "description": "Test post with voting params 03",
+                    "user": "FSpkSzlfbEafc2I7M7aia4QDEQy2",
+                    "upvotes": 1,
+                    "downvotes": 1,
+                    "upvoters": [
+                        "FSpkSzlfbEafc2I7M7aia4QDEQy2"
+                    ],
+                    "downvoters": [],
+                    "createdAt": "2022-03-19T11:59:59.861Z"
+                }
+            ],
+            "polls": [
+                {
+                    "id": "f5409bf6-4c2e-4cec-9b5f-a816f62e1fef",
+                    "books": [
+                        "622324ecc025838be94112b9"
+                    ],
+                    "votes": [
+                        {
+                            "book": "622324ecc025838be94112b9",
+                            "numOfVotes": 0
+                        }
+                    ],
+                    "voters": [
+                        "FSpkSzlfbEafc2I7M7aia4QDEQy2"
+                    ],
+                    "deadline": "2022-03-31T11:59:59.861Z",
+                    "lock": false
+                },
+                {
+                    "id": "bef56fbd-30a2-4779-b16c-30c90d043ff7",
+                    "books": [
+                        "622324ecc025838be94112b9"
+                    ],
+                    "votes": [
+                        {
+                            "book": "622324ecc025838be94112b9",
+                            "numOfVotes": 0
+                        }
+                    ],
+                    "voters": [],
+                    "deadline": "2022-03-29T15:23:29.725Z",
+                    "lock": false
+                }
+            ],
+            "createdAt": "2022-03-19T11:09:21.759Z",
+            "updatedAt": "2022-03-19T17:33:41.951Z",
+            "__v": 0
+        },
+        {
+            "_id": "623719d00a4f734804ea4f42",
+            "club_name": "Kavisha's Book Club",
+            "category": [
+                "Sci-Fi"
+            ],
+            "clubType": false,
+            "description": "Lorem Ipsum dolor sit amet",
+            "img_url": "",
+            "member_count": 0,
+            "members": [
+                "4QlCqVDRvnddaw68O5gHLP3YpZG2",
+                "4QlCqVDRvnddaw68O5gHLP3YpZG2",
+                "4QlCqVDRvnddaw68O5gHLP3YpZG2"
+            ],
+            "posts": [],
+            "createdAt": "2022-03-20T12:10:56.839Z",
+            "updatedAt": "2022-03-20T12:37:12.596Z",
+            "__v": 0
+        }
+    ],
+    "code": 200
+}
