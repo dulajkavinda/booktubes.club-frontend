@@ -36,16 +36,17 @@ export default function ClubDetails() {
                       <li>Book3</li>
                       <li>Book4</li>
                       <li>Book5</li>
+
                       <Button onClick={onOpen} mt={4} colorScheme="blue">
                         Vote
                       </Button>
                     </ul>
                   </div>
-                ) : (
+                ) : selectedClub.admin === user.uid ? (
                   <Button onClick={onOpen} mt={4} colorScheme="blue">
                     Create Poll
                   </Button>
-                )
+                ) : null
               ) : null}
             </div>
 
