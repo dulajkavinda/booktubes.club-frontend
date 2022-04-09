@@ -4,6 +4,8 @@ import { Button, ButtonGroup, Input } from "@chakra-ui/react";
 import { useStoreState } from "easy-peasy";
 import { useDisclosure } from "@chakra-ui/react";
 
+import ClubProgress from "../../components/Club/ClubProgress/ClubProgress";
+
 import AddPoll from "../create/AddPoll";
 export default function ClubDetails() {
   const selectedClub = useStoreState((state) => state.selectedClub);
@@ -30,6 +32,7 @@ export default function ClubDetails() {
         <Button onClick={onOpen} mt={4} colorScheme="blue">
           Create Poll
         </Button>
+        <ClubProgress />
       </div>
 
       <div className={styles.msg}>
