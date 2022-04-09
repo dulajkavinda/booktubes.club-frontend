@@ -11,7 +11,7 @@ import clubdata from "../../data/clubs.json";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useRouter } from "next/router";
 import { auth } from "../../../firebase";
-import { getClubs } from "../../APIs/api.actions";
+import { getClubs, createUser } from "../../APIs/api.actions";
 
 export default function Dashboard() {
   const user = useStoreState((state) => state.user);
@@ -23,6 +23,20 @@ export default function Dashboard() {
   useEffect(() => {
     if (!loggedUser) {
       router.push("/");
+    } else {
+      createUser({
+        _id: user.uid,
+        user_name: user.displayName,
+        email: user.email,
+      })
+        .then((respnose) => {
+          if (respnose.code === 200) {
+            localStorage.setItem("user", user.uid);
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
   }, []);
 

@@ -23,22 +23,9 @@ export default function Home() {
   const [bookClubs, setBookClubs] = useState([]);
 
   useEffect(() => {
+    console.log("in");
     if (userid) {
       router.push("/Dashboard/Dashboard");
-
-      createUser({
-        id: user.uid,
-        user_name: user.displayName,
-        email: user.email,
-      })
-        .then((respnose) => {
-          if (respnose.code === 200) {
-            localStorage.setItem("user", user.uid);
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        });
     }
   }, []);
 
