@@ -12,7 +12,7 @@ import Club from "../../components/Club/Club";
 import clubdata from "../../data/clubs.json";
 
 import { useStoreState } from "easy-peasy";
-
+import { createUser } from "../../APIs/api.actions";
 import { getClubs } from "../../APIs/api.actions";
 
 export default function Home() {
@@ -25,6 +25,20 @@ export default function Home() {
   useEffect(() => {
     if (userid) {
       router.push("/Dashboard/Dashboard");
+
+      createUser({
+        id: user.uid,
+        user_name: user.displayName,
+        email: user.email,
+      })
+        .then((respnose) => {
+          if (respnose.code === 200) {
+            localStorage.setItem("user", user.uid);
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
   }, []);
 

@@ -40,6 +40,7 @@ const signInWithGoogle = async () => {
     const user = res.user;
     const q = query(collection(db, "users"), where("uid", "==", user.uid));
     const docs = await getDocs(q);
+    console.log("user");
     if (docs.docs.length === 0) {
       await addDoc(collection(db, "users"), {
         uid: user.uid,
@@ -47,19 +48,6 @@ const signInWithGoogle = async () => {
         authProvider: "google",
         email: user.email,
       });
-      createUser({
-        id: user.uid,
-        user_name: user.displayName,
-        email: user.email,
-      })
-        .then((respnose) => {
-          if (respnose.code === 200) {
-            localStorage.setItem("user", user.uid);
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        });
     } else {
       localStorage.setItem("user", user.uid);
     }
