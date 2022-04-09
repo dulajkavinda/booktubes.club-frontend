@@ -3,17 +3,17 @@ import styles from "./Club.module.css";
 import Link from "next/link";
 import { Button, ButtonGroup } from "@chakra-ui/react";
 import { motion, AnimateSharedLayout } from "framer-motion";
-import { useStoreActions } from "easy-peasy";
+import { useStoreActions, useStoreState } from "easy-peasy";
 import randomcolor from "randomcolor";
+import { addMember } from "../../APIs/api.actions";
 
 export const News = React.memo(({ club, type }) => {
   const [stateOpen, setOpen] = useState(false);
   const setClub = useStoreActions((actions) => actions.setClub);
+  const user = useStoreState((state) => state.user);
   function handleToggle() {
     setOpen(!stateOpen);
   }
-
-  //console.log(club);
 
   return (
     <AnimateSharedLayout type="crossfade">
@@ -25,12 +25,13 @@ export const News = React.memo(({ club, type }) => {
         <div
           style={{
             color: "black",
-            
           }}
           className={styles.news_corner}
         ></div>
         <div className={styles.left_col}>
-          <img src={club.img_url ? club.img_url : "https://picsum.photos/200/300"} />
+          <img
+            src={club.img_url ? club.img_url : "https://picsum.photos/200/300"}
+          />
         </div>
         <div className={styles.right_col}>
           <div className={styles.news_title}>
@@ -44,7 +45,12 @@ export const News = React.memo(({ club, type }) => {
           <div>
             <div className={styles.buttons}>
               <div>
-                <Button colorScheme="teal" size="xs" onClick={handleToggle}>
+                <Button
+                  disabled={type === "my" ? true : false}
+                  colorScheme="teal"
+                  size="xs"
+                  onClick={() => addMember(club._id, user.uid)}
+                >
                   {type === "my" ? "JOINED" : "JOIN"}
                 </Button>
               </div>

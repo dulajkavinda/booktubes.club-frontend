@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import { Button } from "@chakra-ui/react";
 import styles from "../../styles/Home.module.css";
@@ -20,7 +20,7 @@ export default function Home() {
   const userid = useStoreState((state) => state.user.userid);
   const user = useStoreState((state) => state.user);
 
-  const [bookClubs , setBookClubs] = useState([]) ;
+  const [bookClubs, setBookClubs] = useState([]);
 
   useEffect(() => {
     if (userid) {
@@ -28,14 +28,15 @@ export default function Home() {
     }
   }, []);
 
-  useEffect( () => {
-    getClubs().then((res) => {
-      setBookClubs(res.data);
-    })
-    .catch((err) => {
-      console.log(err);
-    })
-  })
+  useEffect(() => {
+    getClubs()
+      .then((res) => {
+        setBookClubs(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <div>
@@ -66,11 +67,9 @@ export default function Home() {
             {/* {clubdata.data.slice(0, 4).map((club) => {
               return <Club type="all" club={club} />;
             })} */}
-            {
-              bookClubs.map((club) => {
-                return <Club type="all" club={club} />
-              })
-            }
+            {bookClubs.map((club) => {
+              return <Club type="all" club={club} />;
+            })}
           </div>
         </div>
       </main>
