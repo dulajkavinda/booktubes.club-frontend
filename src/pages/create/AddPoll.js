@@ -47,49 +47,51 @@ export default function AddPoll({ isOpen, onClose, books, club_id }) {
         <ModalContent>
           <ModalHeader>Select Books</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>
-            <Select onChange={handleBook1Change} placeholder="Select Book 1">
-              {books.map((books) => {
-                return <option value={books._id}>{books.name}</option>;
-              })}
-            </Select>
-            <Select
-              onChange={handleBook2Change}
-              mt={2}
-              placeholder="Select Book 2"
-            >
-              {books.map((books) => {
-                return <option value={books._id}>{books.name}</option>;
-              })}
-            </Select>
-            <Select
-              onChange={handleBook3Change}
-              mt={2}
-              placeholder="Select Book 3"
-            >
-              {books.map((books) => {
-                return <option value={books._id}>{books.name}</option>;
-              })}
-            </Select>
-            <Select
-              onChange={handleBook4Change}
-              mt={2}
-              placeholder="Select Book 4"
-            >
-              {books.map((books) => {
-                return <option value={books._id}>{books.name}</option>;
-              })}
-            </Select>
-            <Select
-              onChange={handleBook5Change}
-              mt={2}
-              placeholder="Select Book 5"
-            >
-              {books.map((books) => {
-                return <option value={books._id}>{books.name}</option>;
-              })}
-            </Select>
-          </ModalBody>
+          {books ? (
+            <ModalBody>
+              <Select onChange={handleBook1Change} placeholder="Select Book 1">
+                {books.map((books) => {
+                  return <option value={books._id}>{books.name}</option>;
+                })}
+              </Select>
+              <Select
+                onChange={handleBook2Change}
+                mt={2}
+                placeholder="Select Book 2"
+              >
+                {books.map((books) => {
+                  return <option value={books._id}>{books.name}</option>;
+                })}
+              </Select>
+              <Select
+                onChange={handleBook3Change}
+                mt={2}
+                placeholder="Select Book 3"
+              >
+                {books.map((books) => {
+                  return <option value={books._id}>{books.name}</option>;
+                })}
+              </Select>
+              <Select
+                onChange={handleBook4Change}
+                mt={2}
+                placeholder="Select Book 4"
+              >
+                {books.map((books) => {
+                  return <option value={books._id}>{books.name}</option>;
+                })}
+              </Select>
+              <Select
+                onChange={handleBook5Change}
+                mt={2}
+                placeholder="Select Book 5"
+              >
+                {books.map((books) => {
+                  return <option value={books._id}>{books.name}</option>;
+                })}
+              </Select>
+            </ModalBody>
+          ) : null}
 
           <ModalFooter>
             <Button mr={3} onClick={onClose}>
