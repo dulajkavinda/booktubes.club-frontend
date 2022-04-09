@@ -47,7 +47,19 @@ const signInWithGoogle = async () => {
         authProvider: "google",
         email: user.email,
       });
-      createUser(user);
+      createUser({
+        id: user.uid,
+        user_name: user.displayName,
+        email: user.email,
+      })
+        .then((respnose) => {
+          if (respnose.code === 200) {
+            localStorage.setItem("user", user.uid);
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     } else {
       localStorage.setItem("user", user.uid);
     }
