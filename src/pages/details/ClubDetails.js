@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./ClubDetails.module.css";
 import { Button, ButtonGroup, Input } from "@chakra-ui/react";
 import { useStoreState } from "easy-peasy";
 import { useDisclosure } from "@chakra-ui/react";
+import { getBooks, getBookById, createPost } from "../../APIs/api.actions";
 
 import Navbar from "../../containers/NavBar/Navbar";
 import Post from "../../components/posts/Post";
@@ -12,12 +13,50 @@ export default function ClubDetails() {
   const selectedClub = useStoreState((state) => state.selectedClub);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const user = useStoreState((state) => state.user);
+  const [books, setBooks] = useState([]);
+  const [message, setMessage] = useState("");
+
+  console.log(selectedClub);
+
+  function getAllBooks() {
+    getBooks()
+      .then((res) => {
+        setBooks(res.data.name);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  function getBook() {
+    getBookById("selectedClub.polls[0].books[0]")
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  useEffect(() => {
+    getAllBooks();
+    console.log(books);
+    getBook();
+  }, []);
 
   return (
     <div>
       <Navbar username={user.displayName} />
       <div className={styles.main}>
-        <AddPoll isOpen={isOpen} onClose={onClose} />
+        {selectedClub && books && books.length > 0 ? (
+          <AddPoll
+            isOpen={isOpen}
+            onClose={onClose}
+            books={books}
+            club_id={selectedClub._id}
+          />
+        ) : null}
+
         <div className={styles.header}>
           <div className={styles.other}>
             <div className={styles.image}>
@@ -61,17 +100,31 @@ export default function ClubDetails() {
 
         <div className={styles.msg}>
           <div className={styles.posts}>
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post /> <Post />
-            <Post />
-            <Post />
-            <Post />
+            {selectedClub
+              ? selectedClub.posts.map((post) => {
+                  return <Post post={post} />;
+                })
+              : null}
           </div>
-          <Input mt={4} width={"80%"} placeholder="Basic usage" />
-          <Button onClick={onOpen} mt={4} colorScheme="blue">
+          <Input
+            onChange={(e) => setMessage(e.target.value)}
+            mt={4}
+            width={"80%"}
+            placeholder="tell something.."
+          />
+          <Button
+            onClick={() => {
+              createPost(
+                {
+                  user: user.uid,
+                  description: message,
+                },
+                selectedClub._id
+              );
+            }}
+            mt={4}
+            colorScheme="blue"
+          >
             Send Post
           </Button>
         </div>
