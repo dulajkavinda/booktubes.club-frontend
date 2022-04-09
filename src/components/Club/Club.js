@@ -13,7 +13,7 @@ export const News = React.memo(({ club, type }) => {
     setOpen(!stateOpen);
   }
 
-  console.log(club);
+  //console.log(club);
 
   return (
     <AnimateSharedLayout type="crossfade">
@@ -25,12 +25,12 @@ export const News = React.memo(({ club, type }) => {
         <div
           style={{
             color: "black",
-            borderColor: `transparent ${randomcolor()} transparent transparent`,
+            
           }}
           className={styles.news_corner}
         ></div>
         <div className={styles.left_col}>
-          <img src={"https://picsum.photos/200/300"} />
+          <img src={club.img_url ? club.img_url : "https://picsum.photos/200/300"} />
         </div>
         <div className={styles.right_col}>
           <div className={styles.news_title}>
