@@ -18,6 +18,8 @@ import {
   addDoc,
 } from "firebase/firestore";
 
+import { createUser } from "./src/APIs/api.actions";
+
 const firebaseConfig = {
   apiKey: "AIzaSyBv98yyC7KGZSgabd8GwKJA_xpjnaTbfIw",
   authDomain: "booktubesclub.firebaseapp.com",
@@ -45,6 +47,7 @@ const signInWithGoogle = async () => {
         authProvider: "google",
         email: user.email,
       });
+      createUser(user);
     } else {
       localStorage.setItem("user", user.uid);
     }
