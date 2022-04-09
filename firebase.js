@@ -18,6 +18,8 @@ import {
   addDoc,
 } from "firebase/firestore";
 
+import { createUser } from "./src/APIs/api.actions";
+
 const firebaseConfig = {
   apiKey: "AIzaSyBv98yyC7KGZSgabd8GwKJA_xpjnaTbfIw",
   authDomain: "booktubesclub.firebaseapp.com",
@@ -38,6 +40,7 @@ const signInWithGoogle = async () => {
     const user = res.user;
     const q = query(collection(db, "users"), where("uid", "==", user.uid));
     const docs = await getDocs(q);
+    console.log("user");
     if (docs.docs.length === 0) {
       await addDoc(collection(db, "users"), {
         uid: user.uid,

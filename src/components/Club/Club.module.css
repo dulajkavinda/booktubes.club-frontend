@@ -75,7 +75,7 @@
 
 .left_col > img:before {
   background: #f1f1f1;
-  content: "\1F517"" broken image :(" attr(alt);
+  content: "\1F517";
   left: 0;
   height: 100%;
   width: 40%;
@@ -136,7 +136,7 @@
 
 .modal_content > div > img:before {
   background: #f1f1f1;
-  content: "\1F517"" broken image :( just like their promises" attr(alt);
+  content: "\1F517";
   left: 0;
   height: 100%;
   width: 100%;

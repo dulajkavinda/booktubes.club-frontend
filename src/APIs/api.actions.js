@@ -6,6 +6,8 @@ export const createUser = async (user) => {
   const userExsits = await axios.get(
     `${server.BACKEND_URL}/users/getUserById/${user.id}`
   );
+
+  console.log("hi");
   if (userExsits.data.data.length === 0) {
     const response = await axios.post(
       `${server.BACKEND_URL}/users/signUp`,

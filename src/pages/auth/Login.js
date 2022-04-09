@@ -21,6 +21,7 @@ import {
   auth,
   logInWithEmailAndPassword,
   signInWithGoogle,
+  sendPasswordReset,
 } from "../../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useStoreActions } from "easy-peasy";
@@ -111,7 +112,8 @@ export default function LogIn() {
               </Button>
               <Grid container>
                 <Grid item xs>
-                  <MUILink href="#" variant="body2">
+                  {/* <Button > Forgot Password ?</Button> */}
+                  <MUILink href="#" variant="body2" onClick={ () => sendPasswordReset(email.toString())}>
                     Forgot password?
                   </MUILink>
                 </Grid>
@@ -135,6 +137,7 @@ export default function LogIn() {
                   onClick={signInWithGoogle}
                 />
               </Grid>
+              <div>{(error)?'wrong' :''}</div>
             </Box>
           </CardContent>
         </Card>

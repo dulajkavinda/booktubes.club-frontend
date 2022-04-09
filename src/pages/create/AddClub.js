@@ -6,6 +6,9 @@ import { Button, ButtonGroup } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { createClub } from "../../APIs/api.actions";
 
+import { useAuthState } from "react-firebase-hooks/auth";
+import {auth} from "../../../firebase";
+
 export default function AddClub() {
   const [category, setCategory] = React.useState("Thriller");
   const [type, setType] = React.useState("Free");
@@ -13,6 +16,8 @@ export default function AddClub() {
   const [desc, setDesc] = React.useState("");
   const [img, setImg] = React.useState("");
 
+  const [loggedUser, loading,error] = useAuthState(auth);
+  
   const router = useRouter();
 
   const handleChange = (event) => {
@@ -30,6 +35,7 @@ export default function AddClub() {
       img: img,
       type: type,
       currency: category,
+      admin : loggedUser
     }).then((response) => {
       if (response.code === 200) {
         router.push("/Dashboard/Dashboard");
@@ -37,6 +43,7 @@ export default function AddClub() {
     });
   };
 
+  console.log(loggedUser);
   return (
     <div className={styles.main}>
       <span className={styles.title}>Create your Own Club!</span>

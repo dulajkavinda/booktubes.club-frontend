@@ -116,7 +116,11 @@
 }
 
 .myclub {
-  display: flex;
-  width: 90vw;
+  display: inline-grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
   overflow: hidden;
+  column-gap: 30px;
+  row-gap: 30px;
+  padding-bottom: 60px;
 }
