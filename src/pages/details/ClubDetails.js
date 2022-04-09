@@ -27,7 +27,7 @@ export default function ClubDetails() {
               <p>{selectedClub ? selectedClub.description : ""}</p>
               {/* <p>Catogery : {selectedClub.category[0]}</p> */}
 
-              {selectedClub.polls !== undefined || selectedClub !== null ? (
+              {selectedClub ? (
                 selectedClub.polls.length > 0 ? (
                   <div style={{ marginTop: "10px" }}>
                     <ul>
