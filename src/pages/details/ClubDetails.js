@@ -27,24 +27,26 @@ export default function ClubDetails() {
               <p>{selectedClub ? selectedClub.description : ""}</p>
               {/* <p>Catogery : {selectedClub.category[0]}</p> */}
 
-              {selectedClub.polls && selectedClub.polls.length > 0 ? (
-                <div style={{ marginTop: "10px" }}>
-                  <ul>
-                    <li>Book1</li>
-                    <li>Book2</li>
-                    <li>Book3</li>
-                    <li>Book4</li>
-                    <li>Book5</li>
-                    <Button onClick={onOpen} mt={4} colorScheme="blue">
-                      Vote
-                    </Button>
-                  </ul>
-                </div>
-              ) : (
-                <Button onClick={onOpen} mt={4} colorScheme="blue">
-                  Create Poll
-                </Button>
-              )}
+              {selectedClub.polls !== undefined || selectedClub !== null ? (
+                selectedClub.polls.length > 0 ? (
+                  <div style={{ marginTop: "10px" }}>
+                    <ul>
+                      <li>Book1</li>
+                      <li>Book2</li>
+                      <li>Book3</li>
+                      <li>Book4</li>
+                      <li>Book5</li>
+                      <Button onClick={onOpen} mt={4} colorScheme="blue">
+                        Vote
+                      </Button>
+                    </ul>
+                  </div>
+                ) : (
+                  <Button onClick={onOpen} mt={4} colorScheme="blue">
+                    Create Poll
+                  </Button>
+                )
+              ) : null}
             </div>
 
             <div className={styles.info}>
