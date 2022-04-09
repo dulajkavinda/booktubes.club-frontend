@@ -25,7 +25,7 @@ export default function Dashboard() {
       router.push("/");
     } else {
       createUser({
-        _id: user.uid,
+        id: user.uid,
         user_name: user.displayName,
         email: user.email,
       })
