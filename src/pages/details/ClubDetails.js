@@ -21,17 +21,7 @@ export default function ClubDetails() {
   function getAllBooks() {
     getBooks()
       .then((res) => {
-        setBooks(res.data.name);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }
-
-  function getBook() {
-    getBookById("selectedClub.polls[0].books[0]")
-      .then((res) => {
-        console.log(res.data);
+        setBooks(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -41,7 +31,6 @@ export default function ClubDetails() {
   useEffect(() => {
     getAllBooks();
     console.log(books);
-    getBook();
   }, []);
 
   return (
