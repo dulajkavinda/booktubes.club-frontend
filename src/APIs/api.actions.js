@@ -69,3 +69,33 @@ export const addMember = async (clubId, userId) => {
   );
   return response.data;
 };
+
+export const createPoll = async (poll, club_id) => {
+  const response = await axios.post(
+    `${server.BACKEND_URL}/clubs/createPoll/${club_id}`,
+    poll
+  );
+  return response.data;
+};
+
+//Books
+
+export const getBooks = async () => {
+  const response = await axios.get(`${server.BACKEND_URL}/books/getBooks`);
+  return response.data;
+};
+
+export const getBookById = async (book_id) => {
+  const response = await axios.get(
+    `${server.BACKEND_URL}/books/getBooksById/${book_id}`
+  );
+  return response.data;
+};
+
+export const createPost = async (post, club_id) => {
+  const response = await axios.post(
+    `${server.BACKEND_URL}/clubs/createPost/${club_id}`,
+    post
+  );
+  return response.data;
+};

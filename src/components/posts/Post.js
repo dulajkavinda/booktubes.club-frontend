@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, ButtonGroup, Input } from "@chakra-ui/react";
 import { Badge } from "@chakra-ui/react";
-export default function Post() {
+export default function Post({ post }) {
   return (
     <div
       style={{
@@ -11,9 +11,7 @@ export default function Post() {
         flexDirection: "column",
       }}
     >
-      This impressive paella is a perfect party dish and a fun meal to cook
-      together with your guests. Add 1 cup of frozen peas along with the
-      mussels, if you like.
+      {post.description}
       <div>
         <Button size="xs">Upvote (50)</Button>
         <Button ml={3} size="xs">
