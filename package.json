@@ -20,12 +20,13 @@
     "easy-peasy": "^5.0.4",
     "firebase": "^9.6.7",
     "framer-motion": "^3.6.2",
-    "next": "10.0.7",
+    "next": "^10.0.7",
     "randomcolor": "^0.6.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-firebase-hooks": "^5.0.3",
-    "react-google-button": "^0.7.2"
+    "react-google-button": "^0.7.2",
+    "recharts": "^2.1.9"
   },
   "devDependencies": {
     "eslint": "8.12.0",
