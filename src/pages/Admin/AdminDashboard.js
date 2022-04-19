@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect, useState } from "react";
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import MuiDrawer from '@mui/material/Drawer';
@@ -21,6 +21,14 @@ import { mainListItems, secondaryListItems } from './listItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
+import Title from './Title';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+
+import { getUsers , getClubs} from "../../APIs/api.actions";
 
 function Copyright(props) {
   return (
@@ -84,10 +92,23 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 const mdTheme = createTheme();
 
 function DashboardContent() {
+
+  const [bookClubUsers,setBookClubUsers] = useState([]);
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
   };
+
+  useEffect(() => {
+    getUsers()
+      .then((res)=>{
+        setBookClubUsers(res.data);
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err)
+      });
+  },[]);
 
   return (
     <ThemeProvider theme={mdTheme}>
@@ -161,6 +182,55 @@ function DashboardContent() {
         >
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+
+            {/* list users */}
+            <Title>All Users</Title>
+            <Grid container spacing={3} mb={3}>
+              <Grid item xs={12} md={12} lg={12}>
+                <Paper sx={{p: 2,display: 'flex',flexDirection: 'column',}}>
+                  <React.Fragment>
+                    <Table size="small">
+                      <TableHead>
+                        <TableRow>
+                          <TableCell>Id</TableCell>
+                          <TableCell>Username</TableCell>
+                          <TableCell>Email</TableCell>
+                          <TableCell>Joined On</TableCell>
+                          <TableCell></TableCell>
+                          <TableCell align="right">Remove</TableCell>
+                        </TableRow>
+                      </TableHead>
+                      <TableBody>
+                        {bookClubUsers.map((bookClubUser) => (
+                          <TableRow key={bookClubUser._id}>
+                            <TableCell>{bookClubUser._id}</TableCell>
+                            <TableCell>{bookClubUser.user_name}</TableCell>
+                            <TableCell>{bookClubUser.email}</TableCell>
+                            <TableCell>{bookClubUser.createdAt}</TableCell>
+                            <TableCell>{''} </TableCell>
+                            <TableCell>{''} </TableCell>
+                            
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  </React.Fragment>                  
+
+                  <React.Fragment>
+                    {bookClubUsers.map((bookClubUser)=>{
+                        <React.Fragment>
+                          {bookClubUser}
+                        </React.Fragment>
+                    })}
+                  </React.Fragment>
+                </Paper>
+              </Grid>
+            </Grid>
+            {/* list users end */}
+
+            <div>
+              
+            </div>
             <Grid container spacing={3}>
               {/* Chart */}
               <Grid item xs={12} md={8} lg={9}>
@@ -176,24 +246,7 @@ function DashboardContent() {
                 </Paper>
               </Grid>
               {/* Recent Deposits */}
-              <Grid item xs={12} md={4} lg={3}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: 240,
-                  }}
-                >
-                  <Deposits />
-                </Paper>
-              </Grid>
-              {/* Recent Orders */}
-              <Grid item xs={12}>
-                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                  <Orders />
-                </Paper>
-              </Grid>
+    
             </Grid>
             <Copyright sx={{ pt: 4 }} />
           </Container>
