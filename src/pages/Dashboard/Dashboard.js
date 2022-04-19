@@ -90,7 +90,10 @@ export default function Dashboard() {
             return <Club type="all" club={club} />;
           })} */}
           {bookClubs.map((club) => {
-            return <Club type="all" club={club} />;
+            if (!club.members.includes(loggedUser.uid)) {
+              console.log("club members", club);
+              return <Club type="all" club={club} />;
+            }
           })}
         </div>
       </div>
