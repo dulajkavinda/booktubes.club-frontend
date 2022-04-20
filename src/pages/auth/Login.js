@@ -35,6 +35,12 @@ export default function LogIn() {
   const [user, loading, error] = useAuthState(auth);
   const setUser = useStoreActions((actions) => actions.setUser);
   const router = useRouter();
+
+  const admins_uids = [
+    'llXdgJrF0JUKuBY9HH85',
+    'qtVlOoRwR1Ta40kxu6nerk31VrF2',
+  ]
+
   useEffect(() => {
     if (loading) {
       // trigger loading screen
@@ -42,7 +48,13 @@ export default function LogIn() {
     }
     if (user) {
       setUser(user);
-      router.push("/Dashboard/Dashboard");
+      if(admins_uids.includes(user.uid)){
+        router.push("/Admin/AdminDashboard");        
+      }
+      else{
+        router.push("/Dashboard/Dashboard");
+      }
+
     }
   }, [user, loading]);
 

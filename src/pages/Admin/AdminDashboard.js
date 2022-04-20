@@ -28,13 +28,18 @@ import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 
+import { Button } from "@chakra-ui/react";
+
 import { getUsers , getClubs} from "../../APIs/api.actions";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../../firebase";
+import router from "next/router";
 
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="inherit" href="https://booktubes.club">
         Your Website
       </Link>{' '}
       {new Date().getFullYear()}
@@ -98,7 +103,23 @@ function DashboardContent() {
   const toggleDrawer = () => {
     setOpen(!open);
   };
+  const [loggedUser, loading, error] = useAuthState(auth);
 
+  const admins_uids = [
+    'llXdgJrF0JUKuBY9HH85',
+    'qtVlOoRwR1Ta40kxu6nerk31VrF2',
+  ]
+
+  // check if user logged in
+
+  useEffect(()=>{
+    console.log('auth data',auth);
+    console.log('logged user',loggedUser);
+    if(!loggedUser){
+      router.push("/");
+    }
+  });
+  
   useEffect(() => {
     getUsers()
       .then((res)=>{
@@ -141,11 +162,7 @@ function DashboardContent() {
             >
               Dashboard
             </Typography>
-            <IconButton color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
+            <Button onClick={ function(e) {router.push("/")}}>Home</Button>
           </Toolbar>
         </AppBar>
         <Drawer variant="permanent" open={open}>
@@ -165,7 +182,7 @@ function DashboardContent() {
           <List component="nav">
             {mainListItems}
             <Divider sx={{ my: 1 }} />
-            {secondaryListItems}
+          
           </List>
         </Drawer>
         <Box
