@@ -26,11 +26,11 @@ export default function Home() {
 
   useEffect(() => {
     console.log("in");
+    ReactGA.initialize("UA-148753354-1");
+    ReactGA.pageview("/");
 
     if (userid) {
       router.push("/Dashboard/Dashboard");
-      ReactGA.initialize("UA-148753354-1");
-      ReactGA.pageview("/");
     }
   }, []);
 
