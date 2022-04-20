@@ -17,7 +17,6 @@ import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import Title from './Title';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -35,14 +34,15 @@ import ClubTable from '../../components/ClubTable/ClubTable';
 
 function Copyright(props) {
   return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
+    <React.Fragment>
       {'Copyright © '}
       <Link color="inherit" href="https://booktubes.club">
-        Your Website
+        BookTubes.club
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
-    </Typography>
+    </React.Fragment>
+    
   );
 }
 
@@ -209,7 +209,9 @@ function DashboardContent() {
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
 
             {/* list users */}
-            <Title>All Users</Title>
+            <Typography component={"h2"} color={"primary"} gutterBottom>
+              All Users
+            </Typography>
             <Grid container spacing={3} mb={3}>
               <Grid item xs={12} md={12} lg={12}>
                 <Paper sx={{p: 2,display: 'flex',flexDirection: 'column',}}>
@@ -254,7 +256,7 @@ function DashboardContent() {
             {/* list users end */}
 
             <div>
-              <Title>All Clubs</Title>
+              <div>All Clubs</div>
               <ClubTable clubs={bookClubs} users={bookClubUsers}/>
               
             </div>
