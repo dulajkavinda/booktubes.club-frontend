@@ -35,6 +35,8 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../../firebase";
 import router from "next/router";
 
+import ClubTable from '../../components/ClubTable/ClubTable';
+
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -99,6 +101,7 @@ const mdTheme = createTheme();
 function DashboardContent() {
 
   const [bookClubUsers,setBookClubUsers] = useState([]);
+  const [bookClubs,setBookClubs] = useState([]);
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
@@ -129,6 +132,15 @@ function DashboardContent() {
       .catch((err) => {
         console.log(err)
       });
+    getClubs()
+      .then((res)=>{
+        setBookClubs(res.data);
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err)
+      });
+
   },[]);
 
   return (
@@ -246,6 +258,8 @@ function DashboardContent() {
             {/* list users end */}
 
             <div>
+              <Title>All Clubs</Title>
+              <ClubTable clubs={bookClubs} users={bookClubUsers}/>
               
             </div>
             <Grid container spacing={3}>
