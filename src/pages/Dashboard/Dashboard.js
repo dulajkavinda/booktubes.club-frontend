@@ -50,6 +50,7 @@ export default function Dashboard() {
       });
   }, []);
 
+  console.log('user dashboard',user)
   return (
     <div>
       <Navbar username={user.displayName} />
